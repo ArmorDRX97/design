@@ -1,0 +1,55 @@
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity, transform;
+  min-height: calc(100vh - 56px);
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  overflow: hidden;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(2em, 0);
+  min-height: calc(100vh - 56px);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-2em, 0);
+  min-height: calc(100vh - 56px);
+}
+
+
+#inspire {
+  overflow-x: hidden;
+}
+
+.refresh {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+}
+
+.v-btn--active i {
+  color: #1976D2 !important;
+}
+
+.v-data-table .v-data-table__mobile-row {
+  min-height: 35px!important;
+}
+
+.v-data-table .v-data-table__mobile-row:last-child {
+  min-height: 70px!important;
+}
+
+.v-data-table > .v-data-table__wrapper > table > tbody > tr > td, .v-data-table > .v-data-table__wrapper > table > thead > tr > td, .v-data-table > .v-data-table__wrapper > table > tfoot > tr > td {
+  height: 35px!important;
+}
+
+.v-application--is-ltr .v-data-footer__pagination{
+  margin: 0!important;
+}
