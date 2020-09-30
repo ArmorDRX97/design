@@ -6,6 +6,12 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'start',
+    component: () => import('../views/Start'),
+    meta: { transitionName: 'slide', title: 'Старт', login: 'false'}
+  },
+  {
     path: '/register',
     name: 'register',
     component: () => import('../views/Register'),
