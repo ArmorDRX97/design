@@ -33,25 +33,44 @@ const routes = [
     path: '/profile',
     name: 'profile',
     component: () => import('../views/Profile'),
-    meta: { transitionName: 'slide', title: 'Профиль'}
+    meta: { title: 'Профиль'}
   },
   {
     path: '/journal',
     name: 'journal',
     component: () => import('../views/Journal'),
-    meta: { transitionName: 'slide', title: 'Журнал операций'}
+    meta: { title: 'Журнал операций'}
   },
   {
     path: '/buy',
     name: 'buy',
     component: () => import('../views/Buy'),
-    meta: { transitionName: 'slide', title: 'Покупка'}
+    meta: { title: 'Покупка'}
   },
   {
-    path: '/buy/buy-add',
-    name: 'buyAdd',
-    component: () => import('../views/BuyAdd'),
-    meta: { transitionName: 'slide', title: 'Покупка'}
+    path: '/sell',
+    name: 'sell',
+    component: () => import('../views/Sell'),
+    meta: { title: 'Продажа'}
+  },
+  {
+    path: '/cash',
+    name: 'cash',
+    component: () => import('../views/CashTransactions'),
+    meta: { title: 'Кассовые операции'}
+  },
+  {
+    path: '/cash/admission',
+    name: 'admission',
+    component: () => import('../views/Admission'),
+    meta: { transitionName: 'slide', title: 'Поступления'}
+  }
+  ,
+  {
+    path: '/stock',
+    name: 'stock',
+    component: () => import('../views/Stock'),
+    meta: {title: 'Склад'}
   }
 ]
 

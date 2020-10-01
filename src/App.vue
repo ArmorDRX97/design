@@ -5,12 +5,11 @@
             <v-container
                     fluid
             >
-                <transition
-                        :name="transitionName"
-                        mode="out-in"
-                >
+
+                <transition-page>
                     <router-view/>
-                </transition>
+                </transition-page>
+
             </v-container>
         </v-main>
         <br><br><br>
@@ -21,41 +20,26 @@
 
 <script>
     const DEFAULT_TRANSITION = 'fade';
-    import Sidenav from './components/Sidenav';
-    import Footer from './components/Footer';
+    import Sidenav from '@/components/Sidenav';
+    import Footer from '@/components/Footer';
+    import TransitionPage from '@/components/TransitionPage';
 
     export default {
         name: 'App',
         components: {
-            Sidenav, Footer
+            Sidenav, Footer, TransitionPage
         },
         data() {
             return {
-                transitionName: DEFAULT_TRANSITION,
+                prevHeight: 0,
                 login: ''
             };
         },
         watch: {
-            '$route' (to) {
+            '$route'(to) {
                 this.login = to.meta.login || 'true'
             }
         },
-
-        created() {
-            this.$router.beforeEach((to, from, next) => {
-                let transitionName = to.meta.transitionName || from.meta.transitionName;
-
-                if (transitionName === 'slide') {
-                    const toDepth = to.path.split('/').length;
-                    const fromDepth = from.path.split('/').length;
-                    transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
-                }
-
-                this.transitionName = transitionName || DEFAULT_TRANSITION;
-
-                next();
-            });
-        }
     };
 </script>
 
