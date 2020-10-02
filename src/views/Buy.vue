@@ -47,13 +47,13 @@
                     </v-list>
                 <v-card-actions class="bottom">
                     <v-spacer></v-spacer>
-                    <v-btn icon color="red darken-2" @click="dialogShow = false">
+                    <v-btn fab small dark color="red darken-2" @click="dialogShow = false">
                         <v-icon>mdi-clipboard-arrow-left</v-icon>
                     </v-btn>
-                    <v-btn icon color="grey darken-1" @click="dialogShow = false">
+                    <v-btn fab small dark color="grey darken-1" @click="dialogShow = false">
                         <v-icon>mdi-cancel</v-icon>
                     </v-btn>
-                    <v-btn icon color="teal" @click="dialogShow = false">
+                    <v-btn fab small dark color="teal" @click="dialogShow = false">
                         <v-icon>mdi-check</v-icon>
                     </v-btn>
                 </v-card-actions>
@@ -349,6 +349,10 @@
     }
     .v-text-field {
         margin: 0;
+        padding: 0;
+    }
+
+    .v-list{
         padding: 0;
     }
 </style>

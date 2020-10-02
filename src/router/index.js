@@ -57,7 +57,7 @@ const routes = [
     path: '/cash',
     name: 'cash',
     component: () => import('../views/CashTransactions'),
-    meta: { title: 'Кассовые операции'}
+    meta: { title: 'Денежные операции'}
   },
   {
     path: '/cash/admission',

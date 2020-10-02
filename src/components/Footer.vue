@@ -20,7 +20,7 @@
             <v-icon color="blue-grey darken-4">mdi-point-of-sale</v-icon>
         </v-btn>
         <v-btn value="cash" to="/cash" class="btn-footer">
-            <span class="blue-grey--text text--darken-4">Касса</span>
+            <span class="blue-grey--text text--darken-4">Деньги</span>
             <v-icon color="blue-grey darken-4">mdi-cash</v-icon>
         </v-btn>
         <v-btn value="profile" to="/profile" class="btn-footer">
